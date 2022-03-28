@@ -58,3 +58,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# My exclusions
+[Aa]ssets/DOTween Examples
+[Aa]ssets/DOTween Examples.meta
