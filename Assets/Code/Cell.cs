@@ -45,16 +45,15 @@ namespace cards
 
         public void RemoveCard()
         {
-            card.Dispose();
+            card.Dispose(0.4f);
             card = null;
         }
 
         public void MouseClick()
         {
-            DOTween.Kill(card.View.transform);
-            mouseClick?.Invoke(this);
             card.View.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-            card.View.transform.DOScale(1.0f, 0.5f);
+            //card.View.transform.DOScale(1.0f, 0.5f);
+            mouseClick?.Invoke(this);
         }
 
         public void Dispose()

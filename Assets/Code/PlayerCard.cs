@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace cards
@@ -6,6 +7,8 @@ namespace cards
     public class PlayerCard : Card
     {
         public event Action die;
+
+        private float _duration;
 
         public PlayerCard(int health, GameObject view) : base(health, view) { }
 
@@ -15,14 +18,15 @@ namespace cards
             HealthText.text = Health.ToString();
             if (Health <= 0)
             {
-                Die();
+                Coroutines.StartRoutine(Die(_duration));
             }
         }
 
-        public void Die()
+        public IEnumerator Die(float duration)
         {
+            Dispose(duration);
+            yield return new WaitForSeconds(duration);
             die?.Invoke();
-            Dispose();
         }
     }
 }

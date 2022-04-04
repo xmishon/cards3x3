@@ -19,9 +19,9 @@ namespace cards
             HealthText.text = health.ToString();
         }
 
-        public void Dispose()
+        public void Dispose(float duration)
         {
-            View.transform.DOScale(0.0f, 0.5f).OnComplete(() => { Object.Destroy(View); });
+            View.transform?.DOScale(0.0f, duration).OnComplete(() => { Object.Destroy(View); });
         }
     }
 }

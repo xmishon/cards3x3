@@ -73,6 +73,9 @@ namespace cards
         private IEnumerator HandleMove(Cell cell)
         {
             _isMoving = true;
+            //cell.card.View.transform.DOScale(1.0f, _moveTime); поместить эту строчку в другое место
+            // надо проверку на возможность движения сделать внутри корутины, а не снаружи масштаб менять всегда,
+            // а двигать карту, если движение возможно
             PlayerCard card = (PlayerCard)_playerCardCell.card;
             Card oldCard = cell.card;
             cell.RemoveCard();
@@ -96,7 +99,8 @@ namespace cards
         private CardType RandomCardType()
         {
             float probability = Level * 0.1f;
-            probability = Mathf.Clamp(probability, 0.0f, 0.5f);
+            probability = 1.0f;
+            probability = Mathf.Clamp(probability, 0.0f, 0.6f);
             return Random.Range(0.0f, 1.0f) < probability ? CardType.Red : CardType.Green;
         }
 
