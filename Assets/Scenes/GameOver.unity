@@ -235,7 +235,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 338345844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91eeede1da4c1da46a1420d29b23da41, type: 3}
+  m_Script: {fileID: 11500000, guid: 69d39b286bbbc7c49a2aa9b83cd5ec19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _text: {fileID: 1604076604}
@@ -397,7 +397,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 338345849}
-        m_TargetAssemblyTypeName: cards.MainMenuUI, Cards
+        m_TargetAssemblyTypeName: cards.GameOverUI, Cards
         m_MethodName: Close
         m_Mode: 1
         m_Arguments:
@@ -695,7 +695,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 338345849}
-        m_TargetAssemblyTypeName: cards.MainMenuUI, Cards
+        m_TargetAssemblyTypeName: cards.GameOverUI, Cards
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
