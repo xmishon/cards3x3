@@ -51,8 +51,6 @@ namespace cards
 
         public void MouseClick()
         {
-            card.View.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-            //card.View.transform.DOScale(1.0f, 0.5f);
             mouseClick?.Invoke(this);
         }
 
